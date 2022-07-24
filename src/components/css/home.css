@@ -1,0 +1,33 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  background: #fff;
+  border-radius: 10px;
+  width: 69%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seller,.customer{
+  width: 50%;
+  height: 80%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+img{
+  width: 50%;
+  height: 50%;
+}
+
+.seller:hover,.customer:hover{
+  background-color: rgb(233, 227, 227);
+}
