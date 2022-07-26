@@ -4,6 +4,8 @@ const username = "admin";
 const password = "admin";
 
 const SellerLogin = () => {
+    console.log(username);
+    console.log(password);
   return (
     <>
       <div className="main-container">
