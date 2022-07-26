@@ -32,6 +32,9 @@ const SellerMain = () => {
     setPeriod(tempP);
   }
 
+  function pDescription(e) {
+    setProductDescription(e.target.value);
+  }
 
 
   function getTheMetaData() {
@@ -104,7 +107,7 @@ const SellerMain = () => {
         let nftTxn = await connectedContract.makeAProductNFT(
           productName,
           metaData,
-          "hjn"
+          productDescription
         );
 
         console.log("Mining...please wait.");
@@ -215,6 +218,20 @@ const SellerMain = () => {
               <div className="cut" />
               <label htmlFor="period" className="placeholder">
                 Warranty Period
+              </label>
+            </div>
+            <div className="input-container ic2">
+              <input
+                id="dec"
+                className="input"
+                type="textarea"
+                placeholder=" "
+                onChange={pDescription}
+                required
+              />
+              <div className="cut" />
+              <label htmlFor="dec" className="placeholder">
+              Description
               </label>
             </div>
             <button type="text" className="submit" onClick={mintnft}>
