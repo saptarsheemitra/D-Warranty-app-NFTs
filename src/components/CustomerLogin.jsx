@@ -182,7 +182,7 @@ const CustomerLogin = () => {
   4. The button will call the method askContractToMintNft on click.
   */
   const renderConnectedContainer = () => (
-    window.location.pathname="/seller/dashboard"
+    window.location.pathname="/customer/dashboard"
   );
 
   useEffect(() => {
