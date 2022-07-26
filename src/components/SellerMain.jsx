@@ -104,7 +104,7 @@ const SellerMain = () => {
         let nftTxn = await connectedContract.makeAProductNFT(
           productName,
           metaData,
-          productDescription
+          "hjn"
         );
 
         console.log("Mining...please wait.");
@@ -133,7 +133,7 @@ const SellerMain = () => {
     } else if (period == "") {
       alert("Please enter warranty period");
     } else {
-  
+      setupEventListener();
       askContractToMintNft()
     }
   }
