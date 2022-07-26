@@ -5,10 +5,10 @@ import customerLogo from "./Assets/customer.png";
 
 const Home = () => {
   const sellerWeb = () =>{
-    window.location.pathname="/seller"
+    window.location.pathname="/seller/login"
   }
   const customerWeb = () =>{
-    window.location.pathname="/customer"
+    window.location.pathname="/customer/login"
   }
   // function sellerWeb(){
 

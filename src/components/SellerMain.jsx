@@ -2,14 +2,14 @@ import { React, useState } from "react";
 import "./css/sellerMain.css";
 
 const SellerMain = () => {
-  const [cusid, setCusid] = useState("");
+  const [pID, setPID] = useState("");
   const [productName, setProductName] = useState("");
   const [productModel, setProductModel] = useState("");
   const [date, setDate] = useState("");
   const [period, setPeriod] = useState("");
 
-  function customerID(e) {
-      setCusid(e.target.value);
+  function productID(e) {
+      setPID(e.target.value);
   }
   function productname(e) {
     setProductName(e.target.value);
@@ -25,7 +25,7 @@ const SellerMain = () => {
   }
 
   function show() {
-    if (cusid == "") {
+    if (pID == "") {
       alert("Please enter customer id");
     } else if (productName == "") {
       alert("Please enter product name");
@@ -36,7 +36,7 @@ const SellerMain = () => {
     } else if (period == "") {
       alert("Please enter warranty period");
     } else {
-      console.log(cusid);
+      console.log(pID);
       console.log(productName);
       console.log(productModel);
       console.log(date);
@@ -57,12 +57,12 @@ const SellerMain = () => {
                 className="input"
                 type="number"
                 placeholder=" "
-                onChange={customerID}
+                onChange={productID}
                 required
               />
               <div className="cut" />
               <label htmlFor="cusid" className="placeholder">
-                Customer ID
+                Product ID
               </label>
             </div>
             <div className="input-container ic2">
