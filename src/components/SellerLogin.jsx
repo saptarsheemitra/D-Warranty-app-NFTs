@@ -5,12 +5,7 @@ import { ethers } from "ethers";
 import warrantyCard from "../utils/WarrantyCard.json";
 // import SellerMain from "./SellerMain";
 const CONTRACT_ADDRESS = "0x829fa1fcb8fdd9a5d7ae1fb0e1ea20eb10c8a743";
-let productName = "Test Product 4";
-let productID = "234560";
-let serial = "87654";
-let buyingDate = 1658842476;
-let warrantyDuration = 6;
-let productDescription = "Description 2";
+
 
 const SellerLogin = () => {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -102,55 +97,7 @@ const SellerLogin = () => {
     }
   };
 
-  function getTheMetaData() {
-    warrantyDuration = buyingDate + warrantyDuration * 2592000;
-    return (
-      '[{"trait_type": "Product ID","value": "' +
-      productID +
-      '"},{"trait_type": "Serial","value": "' +
-      serial +
-      '"},{"display_type": "date","trait_type": "Created","value": "' +
-      buyingDate +
-      '"},{"display_type": "date","trait_type": "Warranty Till","value": "' +
-      warrantyDuration +
-      '"}]'
-    );
-  }
-
-  const askContractToMintNft = async () => {
-    try {
-      const { ethereum } = window;
-
-      if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const connectedContract = new ethers.Contract(
-          CONTRACT_ADDRESS,
-          warrantyCard.abi,
-          signer
-        );
-        const metaData = getTheMetaData();
-        console.log("Going to pop wallet now to pay gas...");
-        let nftTxn = await connectedContract.makeAProductNFT(
-          productName,
-          metaData,
-          productDescription
-        );
-
-        console.log("Mining...please wait.");
-        await nftTxn.wait();
-
-        console.log(
-          `Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
-        );
-      } else {
-        console.log("Ethereum object doesn't exist!");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+  
   // Render Methods
 
   /*

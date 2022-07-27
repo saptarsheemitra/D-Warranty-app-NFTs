@@ -10,9 +10,7 @@ const Home = () => {
   const customerWeb = () =>{
     window.location.pathname="/customer/login"
   }
-  // function sellerWeb(){
-
-  // }
+  
   return (
     <>
       <div className="main-container">
