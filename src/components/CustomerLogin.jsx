@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import warrantyCard from "../utils/WarrantyCard.json";
 // import SellerMain from "./SellerMain";
-const CONTRACT_ADDRESS = "0x829fa1fcb8fdd9a5d7ae1fb0e1ea20eb10c8a743";
+const CONTRACT_ADDRESS = "0x68cBeD2FAAe2B84119b3ce52844C37532651f5CF";
 
 
 const CustomerLogin = () => {

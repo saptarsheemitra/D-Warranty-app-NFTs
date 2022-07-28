@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import "./css/sellerMain.css";
 import { ethers } from "ethers";
 import warrantyCard from "../utils/WarrantyCard.json";
-const CONTRACT_ADDRESS = "0x829fa1fcb8fdd9a5d7ae1fb0e1ea20eb10c8a743";
+const CONTRACT_ADDRESS = "0x68cBeD2FAAe2B84119b3ce52844C37532651f5CF";
 
 const SellerMain = () => {
   const [pID, setPID] = useState("");
@@ -76,9 +76,10 @@ const SellerMain = () => {
         // If you're familiar with webhooks, it's very similar to that!
         connectedContract.on("NewProductNFTMinted", (from, tokenId) => {
           console.log(from, tokenId.toNumber());
-          alert(
-            `Hey there! We've minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: https://opensea.io/assets/matic/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`
-          );
+          // alert(
+          //   `Hey there! We've minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: https://opensea.io/assets/matic/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`
+          // );
+          window.location.pathname=`https://opensea.io/assets/matic/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`;
         });
 
         console.log("Setup event listener!");
