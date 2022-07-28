@@ -6,8 +6,6 @@ const NFTCard = ({ nft }) => {
     let contract = nft.contract;
     contract = contract.slice(8)
     let tokenid = nft.tokenId;
-
-    console.log(tokenid)
     let redirectadd =`https://opensea.io/assets/matic/${contract}/${tokenid}`
     window.open(redirectadd)
   }
@@ -66,9 +64,8 @@ const NFTCard = ({ nft }) => {
                   </div>
                 </div>
               </div>
-              <div className="btn" onClick={OpenSeaRedirect}>
-               OpenSea.io
-              </div>
+
+              <button className="btn" onClick={OpenSeaRedirect}> OpenSea.io </button>
             </div>
           </div>
         </div>

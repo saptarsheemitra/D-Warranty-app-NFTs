@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import "./css/sellerMain.css";
 import { ethers } from "ethers";
 import warrantyCard from "../utils/WarrantyCard.json";
+import LoadingOverlay from 'react-loading-overlay-ts';
 const CONTRACT_ADDRESS = "0x68cBeD2FAAe2B84119b3ce52844C37532651f5CF";
 
 const SellerMain = () => {
@@ -11,6 +12,8 @@ const SellerMain = () => {
   const [date, setDate] = useState();
   const [period, setPeriod] = useState();
   const [productDescription, setProductDescription] = useState("");
+  const [loading,setLoading] = useState(false);
+
 
   function productID(e) {
       setPID(e.target.value);
@@ -36,6 +39,9 @@ const SellerMain = () => {
     setProductDescription(e.target.value);
   }
 
+  function loadingHandler(){
+    setLoading(true);
+  }
 
   function getTheMetaData() {
     // console.log(period);
@@ -140,14 +146,19 @@ const SellerMain = () => {
     } else {
       setupEventListener();
       askContractToMintNft()
+      loadingHandler()
     }
   }
 
   return (
-    <>
+    <LoadingOverlay
+  active={loading}
+  spinner
+  text='Loading your content...'
+  >
       <div className="main-container">
-        <div className="wrapper">
-          <div className="form">
+        <div className="swrapper">
+          {/* <div className="form"> */}
             <div className="title">Welcome!</div>
             <div className="subtitle">Enter Product Details</div>
             <div className="input-container ic1">
@@ -241,8 +252,8 @@ const SellerMain = () => {
             </button>
           </div>
         </div>
-      </div>
-    </>
+      {/* </div> */}
+      </LoadingOverlay>
   );
 };
 

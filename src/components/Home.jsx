@@ -17,11 +17,11 @@ const Home = () => {
         <div className="wrapper">
             <div className="seller" onClick={sellerWeb}>
               <img src={sellerLogo} alt="Seller" />
-              <b>Seller</b>
+              <b className="margin-top-home">Seller</b>
             </div>
             <div className="customer" onClick={customerWeb}>
               <img src={customerLogo} alt="" />
-              <b>Customer</b>
+              <b className="margin-top-home">Customer</b>
             </div>
         </div>
       </div>

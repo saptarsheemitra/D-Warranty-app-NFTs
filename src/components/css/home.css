@@ -7,7 +7,7 @@
   align-items: center;
 }
 .wrapper{
-  background: #fff;
+  background: linear-gradient(120deg,  #343A4F, #15172b);;
   border-radius: 10px;
   width: 69%;
   height: 85%;
@@ -17,15 +17,18 @@
 }
 .seller,.customer{
   width: 50%;
-  height: 80%;
+  height: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 img{
-  width: 50%;
-  height: 50%;
+  width: 42%;
+  height: 40%;
+}
+.margin-top-home{
+  margin-top: 2rem;
 }
 
 .seller:hover,.customer:hover{
