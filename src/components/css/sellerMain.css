@@ -7,7 +7,8 @@
     align-items: center;
   }
   .wrapper{
-    background: #15172b;
+    background: linear-gradient(120deg,  #343A4F, #15172b);
+    /* background: #15172b; */
     border-radius: 10px;
     width: 69%;
     height: 90%;

@@ -32,11 +32,11 @@ const CustomerMain = () => {
   console.log(nfts)
   return (
     <>
-      <div className="main-container">
+      {/* <div className="main-container"> */}
 
             <NFTContainer nfts={nfts} />
 
-      </div>
+      {/* </div> */}
     </>
   );
 }
