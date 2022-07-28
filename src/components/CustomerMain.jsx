@@ -1,6 +1,7 @@
 import { React,useEffect,useState } from "react";
 import "./css/home.css";
 import NFTContainer from "./NFTContainer";
+import "./css/nftCards.css";
 
 const CustomerMain = () => {
   var temp = []
@@ -32,11 +33,11 @@ const CustomerMain = () => {
   console.log(nfts)
   return (
     <>
-      {/* <div className="main-container"> */}
+      <div className="card-main-container">
 
             <NFTContainer nfts={nfts} />
 
-      {/* </div> */}
+      </div>
     </>
   );
 }

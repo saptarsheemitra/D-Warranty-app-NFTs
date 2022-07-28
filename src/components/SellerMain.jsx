@@ -79,7 +79,8 @@ const SellerMain = () => {
           // alert(
           //   `Hey there! We've minted your NFT and sent it to your wallet. It may be blank right now. It can take a max of 10 min to show up on OpenSea. Here's the link: https://opensea.io/assets/matic/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`
           // );
-          window.location.pathname=`https://opensea.io/assets/matic/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`;
+          window.location.href=`https://opensea.io/assets/matic/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`;
+          // window.open(`https://opensea.io/assets/matic/${CONTRACT_ADDRESS}/${tokenId.toNumber()}`);
         });
 
         console.log("Setup event listener!");

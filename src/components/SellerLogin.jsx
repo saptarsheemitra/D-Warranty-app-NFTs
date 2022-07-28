@@ -111,10 +111,10 @@ const SellerLogin = () => {
         <div className="wrapper">
           <div className="form">
             <div className="title">Welcome!</div>
-            <div className="subtitle">Enter User Details</div>
+            <div className="subtitle">Please connect your blockchain wallet</div>
 
             <button type="text" className="submit" onClick={connectWallet}>
-              submit
+              Connect
             </button>
           </div>
         </div>
