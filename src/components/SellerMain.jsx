@@ -248,7 +248,7 @@ const SellerMain = () => {
               </label>
             </div>
             <button type="text" className="submit" onClick={mintnft}>
-              submit
+              Create NFT
             </button>
           </div>
         </div>
