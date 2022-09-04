@@ -154,7 +154,7 @@ const SellerMain = () => {
     <LoadingOverlay
   active={loading}
   spinner
-  text='Creating your NFT...'
+  text='Loading your content...'
   >
       <div className="main-container">
         <div className="swrapper">
