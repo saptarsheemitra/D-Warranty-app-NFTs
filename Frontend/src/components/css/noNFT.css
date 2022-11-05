@@ -1,0 +1,19 @@
+
+.no-nft-container{
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+  display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+  /* padding: 40px 0px; */
+
+}
+/* .productSpecifications-nonft p {
+    opacity: 0.8;
+    font-size: 20px;
+    line-height: 1.5;
+} */
+.space-nonft{
+    margin: 1rem 0rem 3rem;
+}

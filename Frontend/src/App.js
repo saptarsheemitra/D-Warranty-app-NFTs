@@ -6,6 +6,7 @@ import SellerLogin from "./components/SellerLogin";
 import CustomerLogin from "./components/CustomerLogin";
 import CustomerMain from "./components/CustomerMain";
 
+
 function App() {
   return (
 

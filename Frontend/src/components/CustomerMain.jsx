@@ -1,6 +1,7 @@
 import { React,useEffect,useState } from "react";
 import "./css/home.css";
 import NFTContainer from "./NFTContainer";
+import NoNft from "./NoNft";
 import "./css/nftCards.css";
 
 const CustomerMain = () => {
@@ -8,6 +9,7 @@ const CustomerMain = () => {
 
   const [walletAddress, setWalletAddress] = useState(null)
   const [nfts,setNfts] = useState([]);
+  var isNFT = false
 
   const connectWallet = async () => {
     if (typeof window.ethereum !==`undefined`){
@@ -23,21 +25,37 @@ const CustomerMain = () => {
     const data = await response.json();
     temp = data.items
     setNfts(temp);
+    console.log(nfts.length)
   }
+  
+  console.log(nfts);
+  console.log(nfts.length)
+     if (nfts.length>0){
+      isNFT = true
+    }
+  console.log(isNFT)
+
 
   useEffect(() => {
     connectWallet()
   }, [walletAddress]);
 
 
-  console.log(nfts)
   return (
     <>
-      <div className="card-main-container">
-
+      {/* <div className="card-main-container"> */}
+      {/* <NFTContainer nfts={nfts} /> */}
+      {/* <NoNft/> */}
+      {isNFT==true ? (
+            
             <NFTContainer nfts={nfts} />
+          ) : (
+            <NoNft/>
+          )}
 
-      </div>
+            
+
+      {/* </div> */}
     </>
   );
 }
