@@ -39,10 +39,3 @@ Our problem statement is: In this modern era, most paper documents can be verifi
 1. Click on connect button and connect Polygon Mainnent account through metamask extension popup
 2. After successful connection, you’ll see all the NFTs you own!
 
-
-# TEAM MEMBERS:
-1. Tasnim Anas (TasnimAnas)
-2. Bhanu Pratap Singh (bhanu17crypto)
-3. Kartik Mishra  (kartikmishraa)
-4. Saptarshee Mitra (saptarsheemitra)
-
