@@ -1,9 +1,9 @@
-import { React, useState } from "react";
-import "./css/sellerMain.css";
 import { ethers } from "ethers";
-import warrantyCard from "../utils/WarrantyCard.json";
+import { React, useState } from "react";
 import LoadingOverlay from 'react-loading-overlay-ts';
-const CONTRACT_ADDRESS = "0x68cBeD2FAAe2B84119b3ce52844C37532651f5CF";
+import warrantyCard from "../utils/WarrantyCard.json";
+import "./css/sellerMain.css";
+const CONTRACT_ADDRESS = "0xFb2aC437ca9d3efB217a48de4A0455d668D793aB";
 
 const SellerMain = () => {
   const [pID, setPID] = useState("");
